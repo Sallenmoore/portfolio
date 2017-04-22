@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/shiva-git/portfolio/issues"
   },
-  "homepage": "https://github.com/shiva-git/portfolio#readme"
+  "homepage": "https://github.com/shiva-git/portfolio#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }

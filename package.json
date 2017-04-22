@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Web application for creating cutom profiles online",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiva-git/portfolio.git"
+  },
+  "keywords": [
+    "porfolio"
+  ],
+  "author": "shiva",
+  "license": "'SEE LICENSE IN' LICENSE",
+  "bugs": {
+    "url": "https://github.com/shiva-git/portfolio/issues"
+  },
+  "homepage": "https://github.com/shiva-git/portfolio#readme"
+}

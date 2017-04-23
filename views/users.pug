@@ -1,0 +1,23 @@
+extends layout
+
+block content
+ h1= title
+ p Create your portfolio
+  form(action='/users', method='POST')
+      label Name
+      |  
+      input(type='text', name='name')
+      |  
+      label Email
+      |  
+      input(type='text', name='email_id')
+      |  
+      label Skills
+      |  
+      input(type='text', name='skills')
+      |  
+      label Summary
+      |  
+      input(type='text', name='summary')
+      |  
+      input(type='submit', value='Create Portfolio')

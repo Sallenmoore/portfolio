@@ -16,10 +16,10 @@ router.post('/', function(req, res, next){
 	newUser.save(function (err, result) {
   		if (err) {
   			return handleError(err);
-  		}else{
+  		}/*else{
 
             res.json(result);
-  		}
+  		}*/
      // saved!
 	});
 

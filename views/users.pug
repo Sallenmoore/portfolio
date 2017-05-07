@@ -1,23 +1,41 @@
 extends layout
 
 block content
- h1= title
- p Create your portfolio
-  form(action='/users', method='POST')
-      label Name
-      |  
-      input(type='text', name='name')
-      |  
-      label Email
-      |  
-      input(type='text', name='email_id')
-      |  
-      label Skills
-      |  
-      input(type='text', name='skills')
-      |  
-      label Summary
-      |  
-      input(type='text', name='summary')
-      |  
-      input(type='submit', value='Create Portfolio')
+      
+      link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+      script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js')
+      script(src="/angulartest.js")
+      body(ng-app='display')
+      h1= title
+      h2.text-center Create your portfolio
+      div.container
+            form(action='/users', method='POST')
+                  
+                        div.row
+                              label.col-md-1 Name
+                              |       
+                              input.col-md-2(type='text', name='name',ng-model='test.name')
+                              |  
+                        div.row.mt-0
+                              label.col-md-1 Email
+                              |  
+                              input.col-md-2(type='text', name='email_id')
+                              |
+                        div.row  
+                              label.col-md-1 Skills
+                              |  
+                              input.col-md-2(type='text', name='skills')
+                              |
+                        div.row
+                              p  
+                                    label.col-md-1 Summary
+                                    |  
+                                    input.col-md-2(type='text', name='summary')
+                                    |
+                        div.row
+                              div.col-md-2
+                                    p  
+                                          input.btn.btn-primary(type='submit', value='Create Portfolio',ng-click='test.check = true')
+            p 
+                  span Name is 
+                        span(ng-show='test.check') {{test.name}}

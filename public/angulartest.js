@@ -4,10 +4,11 @@ var angulartest = angular.module('display',[]);
 
 	angulartest.controller('testController',function(){
 
-		this.name='Shiva';
-		this.check=false;
-
-
+		this.name='null',
+		this.email='null',
+		this.skills='null',
+		this.summary='null',
+		this.check=false
 	});
 })();
 

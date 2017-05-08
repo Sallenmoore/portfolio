@@ -16,26 +16,34 @@ block content
                               |       
                               input.col-md-2(type='text', name='name',ng-model='test.name')
                               |  
-                        div.row.mt-0
+                        div.row
                               label.col-md-1 Email
                               |  
-                              input.col-md-2(type='text', name='email_id')
+                              input.col-md-2(type='text', name='email_id',ng-model='test.email')
                               |
                         div.row  
                               label.col-md-1 Skills
                               |  
-                              input.col-md-2(type='text', name='skills')
+                              input.col-md-2(type='text', name='skills',ng-model='test.skills')
                               |
                         div.row
-                              p  
-                                    label.col-md-1 Summary
-                                    |  
-                                    input.col-md-2(type='text', name='summary')
-                                    |
+                              label.col-md-1 Summary
+                              |  
+                              input.col-md-6(type='text', name='summary',ng-model='test.summary')
+                              |
                         div.row
                               div.col-md-2
                                     p  
                                           input.btn.btn-primary(type='submit', value='Create Portfolio',ng-click='test.check = true')
             p 
-                  span Name is 
+                  span Name :  
                         span(ng-show='test.check') {{test.name}}
+            p 
+                  span Email : 
+                        span(ng-show='test.check') {{test.email}}
+            p 
+                  span Skills : 
+                        span(ng-show='test.check') {{test.skills}}
+            p 
+                  span Summary : 
+                        span(ng-show='test.check') {{test.summary}}

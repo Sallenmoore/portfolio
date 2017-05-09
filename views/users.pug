@@ -5,7 +5,7 @@ block content
       h2.text-center Create your portfolio
       div(ng-controller='createCtrl as create')
             div.container
-                  form(action='/users', method='POST', name = 'initialForm')
+                  form(name='initialForm', ng-submit='initialForm.$valid',action='/users', method='POST' novalidate)
                         div.row
                               label.col-md-1 Name
                               |       
@@ -32,13 +32,16 @@ block content
                                           input.btn.btn-primary(type='submit', value='Create Portfolio',ng-click='create.checkSubmission()')
                   p 
                         span Name :  
-                              span(ng-show='create.check') {{create.name}}
+                              span(ng-show='create.check && initialForm.$valid') {{create.name}} {{create.check}}
+
                   p 
                         span Email : 
-                              span(ng-show='create.check') {{create.email}}
+                              span(ng-show='create.check && initialForm.$valid') {{create.email}}
                   p 
                         span Skills : 
-                              span(ng-show='create.check') {{create.skills}}
+                              span(ng-show='create.check && initialForm.$valid') {{create.skills}}
                   p 
                         span Summary : 
-                              span(ng-show='create.check') {{create.summary}}
+                              span(ng-show='create.check && initialForm.$valid') {{create.summary}}
+
+                  p Form is {{initialForm.$valid}}

@@ -13,11 +13,11 @@
 			email: '',
 			skills: '',
 			summary: '',
-			check: 'false'
+			check: false
 		};
 
 		MyFactory.checkSubmission=function() {
-			MyFactory.data.check = 'true';
+			MyFactory.data.check = true;
 			return MyFactory.data.check;
 			// body...
 		};
@@ -31,7 +31,7 @@
 		self.email=MyFactory.data.email;
 		self.skills=MyFactory.data.skills;
 		self.summary=MyFactory.data.summary;
-		self.check=MyFactory.check;
+		self.check=MyFactory.data.check;
 
 		self.checkSubmission = function(){
 

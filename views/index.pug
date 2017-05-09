@@ -1,14 +1,7 @@
 extends layout
 
 block content
-		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
-		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js')
-		
-		h1= title
-		
-		body(ng-app='display')
-
-		div(ng-controller='testController as test')
-			p Welcome to #{title}
-			p Name is {{test.name}}
-		script(src="/angulartest.js")
+	h1= title
+	div(ng-controller='createCtrl as create')
+		p Welcome to #{title}
+		p Name is {{create.name}}

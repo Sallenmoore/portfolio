@@ -11,16 +11,14 @@ router.get('/', function(req, res, next) {
 
 
 router.post('/', function(req, res, next){
-
 	var newUser = new User(req.body);
 	newUser.save(function (err, result) {
   		if (err) {
   			return handleError(err);
-  		}/*else{
+  		}else{
 
-            res.json(result);
-  		}*/
-     // saved!
+            res.json("success");
+  		}
 	});
 
 });

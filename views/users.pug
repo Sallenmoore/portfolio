@@ -5,7 +5,7 @@ block content
       h2.text-center Create your portfolio
       div(ng-controller='createCtrl as create')
             div.container
-                  form(name='initialForm', ng-submit='initialForm.$valid',action='/users', method='POST' novalidate)
+                  form(name='initialForm', ng-submit='create.checkSubmission(initialForm.$valid)', method='POST' novalidate)
                         div.row
                               label.col-md-1 Name
                               |       
@@ -14,7 +14,7 @@ block content
                         div.row
                               label.col-md-1 Email
                               |  
-                              input.col-md-2(type='text', name='email_id',ng-model='create.email' required)
+                              input.col-md-2(type='email', name='email_id',ng-model='create.email' required)
                               |
                         div.row  
                               label.col-md-1 Skills
@@ -29,19 +29,19 @@ block content
                         div.row
                               div.col-md-2
                                     p  
-                                          input.btn.btn-primary(type='submit', value='Create Portfolio',ng-click='create.checkSubmission()')
+                                          input.btn.btn-primary(type='submit', value='Create Portfolio')
                   p 
                         span Name :  
-                              span(ng-show='create.check && initialForm.$valid') {{create.name}} {{create.check}}
+                              span(ng-show='create.check') {{create.name}} {{create.check}}
 
                   p 
                         span Email : 
-                              span(ng-show='create.check && initialForm.$valid') {{create.email}}
+                              span(ng-show='create.check') {{create.email}}
                   p 
                         span Skills : 
-                              span(ng-show='create.check && initialForm.$valid') {{create.skills}}
+                              span(ng-show='create.check') {{create.skills}}
                   p 
                         span Summary : 
-                              span(ng-show='create.check && initialForm.$valid') {{create.summary}}
+                              span(ng-show='create.check') {{create.summary}}
 
                   p Form is {{initialForm.$valid}}

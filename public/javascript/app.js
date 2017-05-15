@@ -31,10 +31,6 @@
 			return ($http.post("/users",data));
 		}
 
-
-
-
-
 		return MyFactory;
 	});
 
@@ -46,12 +42,6 @@
 		self.summary='';
 		self.check='';
 
-		 /*var obj={
-			name: self.name,
-			email: self.email,
-			skills: self.skills,
-			summary: self.data.summary
-		}*/
 		self.checkSubmission = function(checkvalid){
 
 			var obj={
@@ -77,5 +67,3 @@
 		}
 	}]);
 })();
-
-/*module.exports = angulartest;*/

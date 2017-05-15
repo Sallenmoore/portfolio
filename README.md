@@ -1,8 +1,8 @@
 # portfolio
-Creating a portfolio site
-Demonstarting a web layout using Javascript
-Technolgies Used:
-FrontEnd : AngularJs , pug template engine , bootstarp
-Runtime: NodeJs
-Backend: ExpressJs, mongoose
-Database: mongoDb
+Demonstration of a MEAN stack application
+The purpose of this project is to demonstarte how to bind the various components of a MEAN stack web application.
+
+M- Mongodb
+E- ExpressJs
+A- AngularJs
+N- NOdeJs

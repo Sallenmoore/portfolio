@@ -3,7 +3,8 @@ extends layout
 block content
       h1= title
       h2.text-center Create your portfolio
-      div(ng-controller='createCtrl as create')
+      //- using directive binding the controller to the view 
+      div(ng-controller='createCtrl as create') 
             div.container
                   form(name='initialForm', ng-submit='create.checkSubmission(initialForm.$valid)', method='POST' novalidate)
                         div.row

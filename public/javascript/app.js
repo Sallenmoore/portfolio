@@ -1,8 +1,9 @@
 (function(){
-
+	//creating AngularJS application
 	var app = angular.module('app',[]);
 
-
+	//Defining a angular factory to simplify services. 
+	//Calls the backend services using Restful resources
 	app.factory('MyFactory', function ($http) {
  
 		var MyFactory = {};
@@ -34,6 +35,8 @@
 		return MyFactory;
 	});
 
+	//defining controller to interact with the form proving two way binding
+	//Dependency Injection : MyFactory is passed as dependency to the controller
 	app.controller('createCtrl',['MyFactory',function(MyFactory){
 		var self =this;
 		self.name='';

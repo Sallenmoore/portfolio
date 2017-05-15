@@ -3,5 +3,15 @@ extends layout
 block content
 	h1= title
 	div(ng-controller='createCtrl as create')
-		p Welcome to #{title}
-		p Name is {{create.name}}
+		div
+			p The purpose of this project is to demonstarte how to bind the various components of a MEAN stack web application.
+			div
+				ul
+					li M- Mongodb
+					li E- ExpressJs
+					li A- AngularJs
+					li N- NOdeJs
+				p 
+					|This will provide a solid base on how to organise code base for a MEAN stack web appication and how the components are tied to one another.Click on this 
+					a(href='http://localhost:3000/users') link 
+					|and get a feel of how tings work especially the 2-way binding in Angular

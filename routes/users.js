@@ -4,12 +4,11 @@ var User = require('../models/User').User;
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  /*res.send('respond with a resource');*/
 
   res.render('users');
 });
 
-
+//saving post response to database
 router.post('/', function(req, res, next){
 	var newUser = new User(req.body);
 	newUser.save(function (err, result) {
@@ -20,7 +19,6 @@ router.post('/', function(req, res, next){
             res.json("success");
   		}
 	});
-
 });
 
 module.exports = router;
